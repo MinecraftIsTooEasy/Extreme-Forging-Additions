@@ -1,0 +1,76 @@
+item.forging_template/copper.name=铜锻造模板
+item.forging_template/silver.name=银锻造模板
+item.forging_template/gold.name=金锻造模板
+item.forging_template/iron.name=铁锻造模板
+item.forging_template/ancient_metal.name=古金属锻造模板
+item.forging_template/mithril.name=秘银锻造模板
+item.forging_template/adamantium.name=艾德曼锻造模板
+item.forging_template/vibranium.name=振金锻造模板
+item.forging_template.desc=将携带的副属性附加到对应材质的装备上
+item.forging_template.modifiers=携带副属性
+
+gui.forgingTable.mode=切换模式
+gui.forgingTable.modeInfo=当前模式
+gui.forgingTable.modeUpgrading=升级模式
+gui.forgingTable.modeDefusing=拆解模式
+gui.forgingTable.modeApplying=封装模式
+gui.forgingTable.modeForging=锻造模式
+
+config.menu.name.ExtremeForgingAdditions=极难锻造附属
+config.menu.comment.ExtremeForgingAdditions=设置装备升级时会获得几条副词条，以及每种副词条的抽取权重。
+
+config.tab.modifier_gain_count=副词条数量权重
+config.tab.modifier_gain_count.comment=每次升级会按权重决定获得 1、2、3 或 4 条副词条。某个数量的权重越大，就越容易抽到。
+config.tab.tool_modifier_weights=工具副词条权重
+config.tab.tool_modifier_weights.comment=设置每种工具副词条被抽到的权重。权重越大越容易出现，设为 0 则不会随机获得。
+config.tab.armor_modifier_weights=护甲副词条权重
+config.tab.armor_modifier_weights.comment=设置每种护甲副词条被抽到的权重。权重越大越容易出现，设为 0 则不会随机获得。
+
+config.name.extreme-forging-additions.modifierRollCountOneWeight=1 条副词条权重
+config.comment.extreme-forging-additions.modifierRollCountOneWeight=权重越大，升级时越容易抽到 1 条副词条。默认 1。
+config.name.extreme-forging-additions.modifierRollCountTwoWeight=2 条副词条权重
+config.comment.extreme-forging-additions.modifierRollCountTwoWeight=权重越大，升级时越容易抽到 2 条副词条。默认 0，表示默认不会出现。
+config.name.extreme-forging-additions.modifierRollCountThreeWeight=3 条副词条权重
+config.comment.extreme-forging-additions.modifierRollCountThreeWeight=权重越大，升级时越容易抽到 3 条副词条。默认 0，表示默认不会出现。
+config.name.extreme-forging-additions.modifierRollCountFourWeight=4 条副词条权重
+config.comment.extreme-forging-additions.modifierRollCountFourWeight=权重越大，升级时越容易抽到 4 条副词条。默认 0，表示默认不会出现。
+
+config.name.extreme-forging-additions.toolModifierWeight.efficiency_modifier=急速权重
+config.comment.extreme-forging-additions.toolModifierWeight.efficiency_modifier=权重越大，升级时越容易抽到急速。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.toolModifierWeight.aquadynamic_modifier=喜水权重
+config.comment.extreme-forging-additions.toolModifierWeight.aquadynamic_modifier=权重越大，升级时越容易抽到喜水。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.toolModifierWeight.durability_modifier=耐久权重
+config.comment.extreme-forging-additions.toolModifierWeight.durability_modifier=权重越大，升级时越容易抽到耐久。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.toolModifierWeight.damage_modifier=锋利权重
+config.comment.extreme-forging-additions.toolModifierWeight.damage_modifier=权重越大，升级时越容易抽到锋利。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.toolModifierWeight.slowdown_modifier=织网权重
+config.comment.extreme-forging-additions.toolModifierWeight.slowdown_modifier=权重越大，升级时越容易抽到织网。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.toolModifierWeight.unnatural_modifier=超自然权重
+config.comment.extreme-forging-additions.toolModifierWeight.unnatural_modifier=权重越大，升级时越容易抽到超自然。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.toolModifierWeight.demon_power=恶魔之力权重
+config.comment.extreme-forging-additions.toolModifierWeight.demon_power=权重越大，升级时越容易抽到恶魔之力。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.toolModifierWeight.geology=地质学权重
+config.comment.extreme-forging-additions.toolModifierWeight.geology=权重越大，升级时越容易抽到地质学。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.toolModifierWeight.experience=阅历权重
+config.comment.extreme-forging-additions.toolModifierWeight.experience=权重越大，升级时越容易抽到阅历。设为 0 则不会随机获得。
+
+config.name.extreme-forging-additions.armorModifierWeight.durability_modifier=耐久权重
+config.comment.extreme-forging-additions.armorModifierWeight.durability_modifier=权重越大，升级时越容易抽到耐久。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.projectile_protection_modifier=弹射物保护权重
+config.comment.extreme-forging-additions.armorModifierWeight.projectile_protection_modifier=权重越大，升级时越容易抽到弹射物保护。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.explosion_protection_modifier=爆炸保护权重
+config.comment.extreme-forging-additions.armorModifierWeight.explosion_protection_modifier=权重越大，升级时越容易抽到爆炸保护。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.fire_protection_modifier=火焰保护权重
+config.comment.extreme-forging-additions.armorModifierWeight.fire_protection_modifier=权重越大，升级时越容易抽到火焰保护。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.protection_modifier=保护权重
+config.comment.extreme-forging-additions.armorModifierWeight.protection_modifier=权重越大，升级时越容易抽到保护。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.steady_modifier=稳定权重
+config.comment.extreme-forging-additions.armorModifierWeight.steady_modifier=权重越大，升级时越容易抽到稳定。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.blessed_modifier=神圣权重
+config.comment.extreme-forging-additions.armorModifierWeight.blessed_modifier=权重越大，升级时越容易抽到神圣。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.indomitable=坚毅不倒权重
+config.comment.extreme-forging-additions.armorModifierWeight.indomitable=权重越大，升级时越容易抽到坚毅不倒。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.immunity=免疫权重
+config.comment.extreme-forging-additions.armorModifierWeight.immunity=权重越大，升级时越容易抽到免疫。设为 0 则不会随机获得。
+config.name.extreme-forging-additions.armorModifierWeight.thorns=荆棘权重
+config.comment.extreme-forging-additions.armorModifierWeight.thorns=权重越大，升级时越容易抽到荆棘。设为 0 则不会随机获得。

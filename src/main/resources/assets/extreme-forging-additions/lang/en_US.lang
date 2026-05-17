@@ -1,0 +1,76 @@
+item.forging_template/copper.name=Copper Forging Template
+item.forging_template/silver.name=Silver Forging Template
+item.forging_template/gold.name=Gold Forging Template
+item.forging_template/iron.name=Iron Forging Template
+item.forging_template/ancient_metal.name=Ancient Metal Forging Template
+item.forging_template/mithril.name=Mithril Forging Template
+item.forging_template/adamantium.name=Adamantium Forging Template
+item.forging_template/vibranium.name=Vibranium Forging Template
+item.forging_template.desc=Adds a carried modifier to matching equipment
+item.forging_template.modifiers=Carried modifiers
+
+gui.forgingTable.mode=Mode
+gui.forgingTable.modeInfo=Current mode
+gui.forgingTable.modeUpgrading=Upgrade
+gui.forgingTable.modeDefusing=Split modifier
+gui.forgingTable.modeApplying=Apply modifier
+gui.forgingTable.modeForging=Forge
+
+config.menu.name.ExtremeForgingAdditions=Extreme Forging Additions
+config.menu.comment.ExtremeForgingAdditions=Set how many modifiers equipment may gain and the draw weight of each modifier.
+
+config.tab.modifier_gain_count=Gain Count Weights
+config.tab.modifier_gain_count.comment=Each level-up draws 1, 2, 3, or 4 modifier gains by weight. A higher weight makes that count more likely.
+config.tab.tool_modifier_weights=Tool Modifier Weights
+config.tab.tool_modifier_weights.comment=Set the draw weight of each tool modifier. Higher weights are more likely, and 0 prevents random gains.
+config.tab.armor_modifier_weights=Armor Modifier Weights
+config.tab.armor_modifier_weights.comment=Set the draw weight of each armor modifier. Higher weights are more likely, and 0 prevents random gains.
+
+config.name.extreme-forging-additions.modifierRollCountOneWeight=Weight for 1 gain
+config.comment.extreme-forging-additions.modifierRollCountOneWeight=Higher weights make equipment more likely to gain 1 modifier on level-up. Default 1.
+config.name.extreme-forging-additions.modifierRollCountTwoWeight=Weight for 2 gains
+config.comment.extreme-forging-additions.modifierRollCountTwoWeight=Higher weights make equipment more likely to gain 2 modifiers on level-up. Default 0, so it will not happen unless changed.
+config.name.extreme-forging-additions.modifierRollCountThreeWeight=Weight for 3 gains
+config.comment.extreme-forging-additions.modifierRollCountThreeWeight=Higher weights make equipment more likely to gain 3 modifiers on level-up. Default 0, so it will not happen unless changed.
+config.name.extreme-forging-additions.modifierRollCountFourWeight=Weight for 4 gains
+config.comment.extreme-forging-additions.modifierRollCountFourWeight=Higher weights make equipment more likely to gain 4 modifiers on level-up. Default 0, so it will not happen unless changed.
+
+config.name.extreme-forging-additions.toolModifierWeight.efficiency_modifier=Efficiency weight
+config.comment.extreme-forging-additions.toolModifierWeight.efficiency_modifier=Higher weights make Efficiency more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.toolModifierWeight.aquadynamic_modifier=Aquadynamic weight
+config.comment.extreme-forging-additions.toolModifierWeight.aquadynamic_modifier=Higher weights make Aquadynamic more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.toolModifierWeight.durability_modifier=Durability weight
+config.comment.extreme-forging-additions.toolModifierWeight.durability_modifier=Higher weights make Durability more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.toolModifierWeight.damage_modifier=Damage weight
+config.comment.extreme-forging-additions.toolModifierWeight.damage_modifier=Higher weights make Damage more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.toolModifierWeight.slowdown_modifier=Slowdown weight
+config.comment.extreme-forging-additions.toolModifierWeight.slowdown_modifier=Higher weights make Slowdown more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.toolModifierWeight.unnatural_modifier=Unnatural weight
+config.comment.extreme-forging-additions.toolModifierWeight.unnatural_modifier=Higher weights make Unnatural more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.toolModifierWeight.demon_power=Demon weight
+config.comment.extreme-forging-additions.toolModifierWeight.demon_power=Higher weights make Demon more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.toolModifierWeight.geology=Geology weight
+config.comment.extreme-forging-additions.toolModifierWeight.geology=Higher weights make Geology more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.toolModifierWeight.experience=Experience weight
+config.comment.extreme-forging-additions.toolModifierWeight.experience=Higher weights make Experience more likely on level-up. Set to 0 to prevent random gains.
+
+config.name.extreme-forging-additions.armorModifierWeight.durability_modifier=Durability weight
+config.comment.extreme-forging-additions.armorModifierWeight.durability_modifier=Higher weights make Durability more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.projectile_protection_modifier=Projectile Protection weight
+config.comment.extreme-forging-additions.armorModifierWeight.projectile_protection_modifier=Higher weights make Projectile Protection more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.explosion_protection_modifier=Explosion Protection weight
+config.comment.extreme-forging-additions.armorModifierWeight.explosion_protection_modifier=Higher weights make Explosion Protection more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.fire_protection_modifier=Fire Protection weight
+config.comment.extreme-forging-additions.armorModifierWeight.fire_protection_modifier=Higher weights make Fire Protection more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.protection_modifier=Protection weight
+config.comment.extreme-forging-additions.armorModifierWeight.protection_modifier=Higher weights make Protection more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.steady_modifier=Steady weight
+config.comment.extreme-forging-additions.armorModifierWeight.steady_modifier=Higher weights make Steady more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.blessed_modifier=Blessed weight
+config.comment.extreme-forging-additions.armorModifierWeight.blessed_modifier=Higher weights make Blessed more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.indomitable=Indomitable weight
+config.comment.extreme-forging-additions.armorModifierWeight.indomitable=Higher weights make Indomitable more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.immunity=Immunity weight
+config.comment.extreme-forging-additions.armorModifierWeight.immunity=Higher weights make Immunity more likely on level-up. Set to 0 to prevent random gains.
+config.name.extreme-forging-additions.armorModifierWeight.thorns=Thorns weight
+config.comment.extreme-forging-additions.armorModifierWeight.thorns=Higher weights make Thorns more likely on level-up. Set to 0 to prevent random gains.
