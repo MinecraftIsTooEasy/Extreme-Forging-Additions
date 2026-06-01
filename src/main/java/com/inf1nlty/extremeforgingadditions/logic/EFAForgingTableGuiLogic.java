@@ -49,12 +49,12 @@ public final class EFAForgingTableGuiLogic {
         };
     }
 
-    public static boolean handleModeButtonAction(GuiButton button, GuiButton modeButton, EntityPlayer player) {
+    public static boolean handleModeButtonAction(GuiButton button, GuiButton modeButton, EntityPlayer player, int x, int y, int z) {
         if (button != modeButton) {
             return false;
         }
 
-        Network.sendToServer(new C2SSwitchForgingTableModePacket());
+        Network.sendToServer(new C2SSwitchForgingTableModePacket(x, y, z));
         if (modeButton != null) {
             modeButton.enabled = false;
         }

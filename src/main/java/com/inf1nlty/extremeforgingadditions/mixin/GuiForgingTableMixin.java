@@ -73,7 +73,7 @@ public abstract class GuiForgingTableMixin extends GuiContainer implements EFAFo
 
     @Inject(method = "actionPerformed", at = @At("HEAD"), cancellable = true)
     private void injectModeButtonAction(GuiButton button, CallbackInfo ci) {
-        if (EFAForgingTableGuiLogic.handleModeButtonAction(button, this.efa$modeButton, this.player)) {
+        if (EFAForgingTableGuiLogic.handleModeButtonAction(button, this.efa$modeButton, this.player, this.efa$blockX, this.efa$blockY, this.efa$blockZ)) {
             ci.cancel();
         }
     }
