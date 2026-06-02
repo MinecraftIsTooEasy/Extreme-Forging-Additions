@@ -12,6 +12,7 @@
   },
   "mixins": [
     "accessor.ContainerForgingTableAccessor",
+    "accessor.ContainerForgingTablePositionAccessor",
     "accessor.ForgingTableSlotsAccessor",
     "accessor.TileEntityForgingTableAccessor",
     "ContainerForgingTableMixin",

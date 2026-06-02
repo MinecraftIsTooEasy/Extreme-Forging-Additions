@@ -7,19 +7,19 @@ import net.minecraft.EntityPlayer;
 import net.minecraft.ResourceLocation;
 import net.minecraft.ServerPlayer;
 
-public class C2SSwitchForgingTableModePacket implements Packet {
+public class C2SRequestForgingTableModePacket implements Packet {
 
-    public static final ResourceLocation CHANNEL = new ResourceLocation("efa", "sw_mode");
+    public static final ResourceLocation CHANNEL = new ResourceLocation("efa", "req_mode");
 
     private final int x;
     private final int y;
     private final int z;
 
-    public C2SSwitchForgingTableModePacket(PacketByteBuf buf) {
+    public C2SRequestForgingTableModePacket(PacketByteBuf buf) {
         this(buf.readInt(), buf.readInt(), buf.readInt());
     }
 
-    public C2SSwitchForgingTableModePacket(int x, int y, int z) {
+    public C2SRequestForgingTableModePacket(int x, int y, int z) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -35,7 +35,7 @@ public class C2SSwitchForgingTableModePacket implements Packet {
     @Override
     public void apply(EntityPlayer player) {
         if (player instanceof ServerPlayer serverPlayer) {
-            EFAForgingTablePacketLogic.processSwitchForgingTableModePacket(serverPlayer, this.x, this.y, this.z);
+            EFAForgingTablePacketLogic.processRequestForgingTableModePacket(serverPlayer, this.x, this.y, this.z);
         }
     }
 

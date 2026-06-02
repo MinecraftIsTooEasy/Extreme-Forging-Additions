@@ -2,6 +2,7 @@ package com.inf1nlty.extremeforgingadditions.logic;
 
 import com.inf1nlty.extremeforgingadditions.api.EFAForgingTable;
 import com.inf1nlty.extremeforgingadditions.api.EFAForgingTableGui;
+import com.inf1nlty.extremeforgingadditions.network.C2SRequestForgingTableModePacket;
 import com.inf1nlty.extremeforgingadditions.network.C2SSwitchForgingTableModePacket;
 import com.inf1nlty.extremeforgingadditions.network.S2CUpdateForgingTableModeStatePacket;
 import moddedmite.rustedironcore.network.Network;
@@ -55,11 +56,12 @@ public final class EFAForgingTableGuiLogic {
         }
 
         Network.sendToServer(new C2SSwitchForgingTableModePacket(x, y, z));
-        if (modeButton != null) {
-            modeButton.enabled = false;
-        }
 
         return true;
+    }
+
+    public static void requestModeState(int x, int y, int z) {
+        Network.sendToServer(new C2SRequestForgingTableModePacket(x, y, z));
     }
 
     public static void enableModeButton(GuiButton modeButton) {
@@ -90,10 +92,7 @@ public final class EFAForgingTableGuiLogic {
         }
 
         GuiScreen currentScreen = minecraft.currentScreen;
-        if (currentScreen instanceof GuiForgingTable && currentScreen instanceof EFAForgingTableGui gui
-                && gui.efa$getBlockX() == packet.getX()
-                && gui.efa$getBlockY() == packet.getY()
-                && gui.efa$getBlockZ() == packet.getZ()) {
+        if (currentScreen instanceof GuiForgingTable && currentScreen instanceof EFAForgingTableGui gui) {
             gui.efa$setBlockMode(packet.getState());
             ((GuiForgingTable) currentScreen).enableButton();
         }

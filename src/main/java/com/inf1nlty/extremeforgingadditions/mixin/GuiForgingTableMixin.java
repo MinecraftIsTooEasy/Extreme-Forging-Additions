@@ -4,8 +4,10 @@ import com.inf1nlty.extremeforgingadditions.api.EFAForgingTable;
 import com.inf1nlty.extremeforgingadditions.api.EFAForgingTableGui;
 import com.inf1nlty.extremeforgingadditions.logic.EFAForgingTableGuiLogic;
 import com.inf1nlty.extremeforgingadditions.logic.EFAForgingTableModeLogic;
+import com.inf1nlty.extremeforgingadditions.mixin.accessor.ContainerForgingTablePositionAccessor;
 import net.minecraft.*;
 import net.xiaoyu233.mitemod.miteite.gui.GuiForgingTable;
+import net.xiaoyu233.mitemod.miteite.inventory.container.ContainerForgingTable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -27,6 +29,8 @@ public abstract class GuiForgingTableMixin extends GuiContainer implements EFAFo
     @Unique
     private GuiButton efa$modeButton;
     @Unique
+    private boolean efa$requestedInitialMode;
+    @Unique
     private int efa$blockX;
     @Unique
     private int efa$blockY;
@@ -44,14 +48,20 @@ public abstract class GuiForgingTableMixin extends GuiContainer implements EFAFo
         this.efa$blockX = x;
         this.efa$blockY = y;
         this.efa$blockZ = z;
+        this.efa$refreshBlockCoordinates();
     }
 
     @SuppressWarnings("unchecked")
     @Inject(method = "initGui", at = @At("RETURN"))
     private void injectModeButton(CallbackInfo ci) {
+        this.efa$refreshBlockCoordinates();
         EFAForgingTableGuiLogic.moveStartButton(this.startButton, this.width, this.height);
         this.efa$modeButton = EFAForgingTableGuiLogic.createModeButton(this.efa$modeButton, this.width, this.height);
         this.buttonList.add(this.efa$modeButton);
+        if (!this.efa$requestedInitialMode) {
+            this.efa$requestedInitialMode = true;
+            EFAForgingTableGuiLogic.requestModeState(this.efa$blockX, this.efa$blockY, this.efa$blockZ);
+        }
     }
 
     @Inject(method = "drawGuiContainerBackgroundLayer", at = @At("RETURN"))
@@ -73,6 +83,7 @@ public abstract class GuiForgingTableMixin extends GuiContainer implements EFAFo
 
     @Inject(method = "actionPerformed", at = @At("HEAD"), cancellable = true)
     private void injectModeButtonAction(GuiButton button, CallbackInfo ci) {
+        this.efa$refreshBlockCoordinates();
         if (EFAForgingTableGuiLogic.handleModeButtonAction(button, this.efa$modeButton, this.player, this.efa$blockX, this.efa$blockY, this.efa$blockZ)) {
             ci.cancel();
         }
@@ -99,7 +110,24 @@ public abstract class GuiForgingTableMixin extends GuiContainer implements EFAFo
     }
 
     @Override
+    public void efa$refreshBlockCoordinates() {
+        if (this.inventorySlots instanceof ContainerForgingTable container) {
+            ContainerForgingTablePositionAccessor accessor = (ContainerForgingTablePositionAccessor) container;
+            this.efa$blockX = accessor.efa$getBlockX();
+            this.efa$blockY = accessor.efa$getBlockY();
+            this.efa$blockZ = accessor.efa$getBlockZ();
+        }
+    }
+
+    @Override
+    public boolean efa$isAtBlock(int x, int y, int z) {
+        this.efa$refreshBlockCoordinates();
+        return this.efa$blockX == x && this.efa$blockY == y && this.efa$blockZ == z;
+    }
+
+    @Override
     public void efa$setBlockMode(int mode) {
+        this.efa$refreshBlockCoordinates();
         this.efa$modeIndex = EFAForgingTableModeLogic.normalizeMode(mode);
         EFAForgingTableGuiLogic.applyModeToTile(this.mc, this.efa$blockX, this.efa$blockY, this.efa$blockZ, this.efa$modeIndex);
     }

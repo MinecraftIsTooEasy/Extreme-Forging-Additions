@@ -1,6 +1,5 @@
 package com.inf1nlty.extremeforgingadditions.network;
 
-import com.inf1nlty.extremeforgingadditions.ExtremeForgingAdditionsMod;
 import com.inf1nlty.extremeforgingadditions.logic.EFAForgingTablePacketLogic;
 import moddedmite.rustedironcore.network.Packet;
 import moddedmite.rustedironcore.network.PacketByteBuf;
@@ -10,7 +9,7 @@ import net.minecraft.ResourceLocation;
 
 public class S2CUpdateForgingTableModeStatePacket implements Packet {
 
-    public static final ResourceLocation CHANNEL = new ResourceLocation(ExtremeForgingAdditionsMod.MOD_ID, "update_forging_table_mode_state");
+    public static final ResourceLocation CHANNEL = new ResourceLocation("efa", "mode_state");
 
     private final int x;
     private final int y;
