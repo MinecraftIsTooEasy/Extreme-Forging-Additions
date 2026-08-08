@@ -20,5 +20,8 @@
     "ItemToolLevelUpMixin",
     "ForgingTableSlotsMixin",
     "TileEntityForgingTableMixin"
-  ]
+  ],
+  "overwrites": {
+    "requireAnnotations": true
+  }
 }

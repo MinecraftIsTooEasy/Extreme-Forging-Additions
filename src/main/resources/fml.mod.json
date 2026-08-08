@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "extreme-forging-additions",
+  "id": "${id}",
   "version": "${version}",
   "depends": {
     "fishmodloader": ">=3.0.0",
@@ -9,7 +9,7 @@
     "mite_ite": ">=2.0.27"
   },
   "environment": "*",
-  "name": "Extreme Forging Additions",
+  "name": "${name}",
   "description": "",
   "authors": [
     "Inf1nlty"
